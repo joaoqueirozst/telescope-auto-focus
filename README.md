@@ -40,7 +40,7 @@ Once communication was finalized, the printed circuit board was created using [E
 
 The board is powered by a 12V power supply. This power supply directly powers the motor and an LM7805 voltage regulator, which reduces the voltage to 5V to power the ESP32. It contains three capacitors indicated in the A4988 stepper motor driver datasheet, a safety diode to prevent a possible short circuit, and auxiliary connectors.
 
-The next figure illustrates how the board looked with the circuits connected:
+The next figure illustrates how the board looked with the circuits connected.
 
 <p align="center">
   <img src="figures/pci.png" width="400"/>
