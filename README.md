@@ -14,7 +14,7 @@ The first stage of the project was the development of a system to move the teles
 The lens movement was as follows:
 
 <p align="center">
-  <img src="lens_movement.png" width="400"/>
+  <img src="figures/lens_movement.png" width="400"/>
 </p>
 
 ## Image focus quantification
@@ -43,7 +43,7 @@ The board is powered by a 12V power supply. This power supply directly powers th
 The next figure illustrates how the board looked with the circuits connected:
 
 <p align="center">
-  <img src="pci.png" width="400"/>
+  <img src="figures/pci.png" width="400"/>
 </p>
 
 <br>
@@ -54,13 +54,13 @@ The next figure illustrates how the board looked with the circuits connected:
 The following figure illustrates the Python code, using the Socket library, sending a steps value defined by the user command. This value reached the ESP32 and was written to the Arduino IDE terminal.
 
 <p align="center">
-  <img src="comunication.png" width="600"/>
+  <img src="figures/comunication.png" width="600"/>
 </p>
 
 Subsequently, the ESP32 code was completed to use this received value to rotate the motor and move the telescope lens. The following figure shows the lens positions before (left) and after (right) the step command sent by the user.
 
 <p align="center">
-  <img src="movement.png" width="600"/>
+  <img src="figures/movement.png" width="600"/>
 </p>
 
 Another type of experiment was conducted to confirm whether the focus estimation system was working correctly, in order to subsequently define the best position for the telescope lens.
@@ -68,13 +68,13 @@ Another type of experiment was conducted to confirm whether the focus estimation
 For this, several photos were taken of focused and out-of-focus scenes. These photos were passed through the focus estimation algorithm and the focus values ​​were calculated. The following figure shows some examples of tested images, in red, the value estimated by the algorithm and whether it is considered focused or not.
 
 <p align="center">
-  <img src="focus.png" width="400"/>
+  <img src="figures/focus.png" width="400"/>
 </p>
 
 Finally, the entire system was mounted on the telescope, and the next figure shows what the telescope's structure looked like at the end of the project.
 
 <p align="center">
-  <img src="final.png" width="400"/>
+  <img src="figures/final.png" width="400"/>
 </p>
 
 <br>
