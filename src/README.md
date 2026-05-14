@@ -8,7 +8,7 @@ The system uses focus metrics based on the variance of the `Laplacian` operator 
 
 ---
 
-# Project Structure
+# Architecture
 
 ```bash
 src/
@@ -20,7 +20,7 @@ src/
 
 ---
 
-# System Overview
+# System
 
 The project is divided into two main modules:
 
@@ -196,7 +196,3 @@ For this project, the selected focus threshold value was `62`, which was experim
 ```python
 threshold = 62
 ```
-
-# Author
-
-Developed by João Pedro, with [Lab Penguin](https://github.com/Lab-Penguin).
