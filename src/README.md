@@ -6,8 +6,6 @@ The project performs automatic lens adjustment by analyzing image sharpness capt
 
 The system uses focus metrics based on the variance of the `Laplacian` operator to determine the sharpest image and automatically position the telescope lens at the best focal point.
 
----
-
 # Architecture
 
 ```bash
@@ -17,8 +15,6 @@ src/
 ├── server.py
 └── client.cpp
 ```
-
----
 
 # System
 
@@ -32,8 +28,6 @@ The project is divided into two main modules:
 
 The server captures images from the camera, evaluates the focus quality, and sends movement commands to the ESP32 through socket communication. The ESP32 then adjusts the lens position accordingly.
 
----
-
 # Focus Estimation
 
 The focus quality is estimated using the variance of the `Laplacian` operator:
@@ -43,8 +37,6 @@ cv2.Laplacian()
 ```
 
 This method evaluates image sharpness by measuring high-frequency components. Higher variance values indicate sharper and better-focused images.
-
----
 
 # Socket Communication
 
@@ -66,8 +58,6 @@ client.println("ok");
 
 This guarantees synchronized communication between both systems.
 
----
-
 # Hardware Requirements
 
 To run the project, you will need:
@@ -78,8 +68,6 @@ To run the project, you will need:
 - Stepper motor;
 - Camera or webcam;
 - Wi-Fi network.
-
----
 
 # Installing Python and the Arduino IDE
 
@@ -105,8 +93,6 @@ Install automatically using:
 pip install -r requirements.txt
 ```
 
----
-
 # ESP32 Wi-Fi Configuration
 
 Inside `client.cpp`, configure:
@@ -124,8 +110,6 @@ const char* ssid = "MyWiFi";
 const char* password = "12345678";
 const char* host = "192.168.0.0";
 ```
-
----
 
 # Server Configuration
 
@@ -145,8 +129,6 @@ port = 8000
 
 The server and ESP32 must be connected to the same Wi-Fi network.
 
----
-
 # Running the Project
 
 ## 1. Upload the Client Code to ESP32 and start the Python Server
@@ -163,8 +145,6 @@ or:
 python3 server.py
 ```
 
----
-
 ## 2. Start the ESP32 System
 
 After powering the ESP32:
@@ -173,8 +153,6 @@ After powering the ESP32:
 - Establishes socket communication with the server;
 - Initializes motor calibration;
 - Starts automatic focus adjustment.
-
----
 
 # Focus Adjustment Workflow
 
@@ -187,8 +165,6 @@ The system workflow follows these steps:
 - Stepper motor moves the lens;
 - New image is captured;
 - Best focal position is selected automatically.
-
----
 
 # Observations
 For this project, the selected focus threshold value was `62`, which was experimentally defined according to the image acquisition conditions used during development. However, this value may vary depending on factors such as camera quality, sensor characteristics, optical configuration, environmental lighting conditions, and image noise. Therefore, users may need to calibrate and adjust the threshold according to their own telescope setup and acquisition environment in order to achieve more accurate focus estimation results.
